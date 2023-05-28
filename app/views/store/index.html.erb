@@ -11,9 +11,11 @@
         <%= sanitize(product.description) %>
         <div class="price_line">
           <span class="price"><%= number_to_currency(product.price) %></span>
+          <!--          发送create请求，通过按钮提交-->
+          <%= button_to "Add to Cart", line_items_path(product_id: product) %>
         </div>
       </div>
     <% end %>
-   <% end %>
+  <% end %>
 <% end %>
 
