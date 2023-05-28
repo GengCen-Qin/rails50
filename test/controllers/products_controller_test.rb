@@ -51,4 +51,21 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to products_url
   end
+
+  test "can't delete product in cart" do
+    # 运行代码块前后数量变化了多少，也就是说当我执行 delete操作时，判断是否Product.count数量是否会变化，这里0表示，不会变化，因为two被 line_item所引用
+    assert_difference("Product.count",0) do
+      delete product_url(products(:two))
+    end
+
+    assert_redirected_to products_url
+  end
+
+  test  "should Destroy product" do
+    assert_difference("Product.count",-1) do
+      delete product_url(@product)
+    end
+
+    assert_redirected_to products_url
+  end
 end
