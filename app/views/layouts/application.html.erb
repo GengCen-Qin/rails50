@@ -9,23 +9,28 @@
 </head>
 
 <body class="<%= controller_name %>">
-  <div id="banner">
-    <%= image_tag 'logo.svg', alt: "The Pragmatic Bookshelf" %>
-    <span class="title"><%= @page_title %></span>
+<div id="banner">
+  <%= image_tag 'logo.svg', alt: "The Pragmatic Bookshelf" %>
+  <span class="title"><%= @page_title %></span>
+</div>
+<div id="columns">
+  <div id="side">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Question</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><span>访问时间：<%= @current_time %></span></li>
+      <% if @counter > 5 %>
+        <li><span>终于到：<%= @counter %></span></li>
+      <% else %>
+        <li><span>才到：<%= @counter %></span></li>
+      <% end %>>
+    </ul>
   </div>
-  <div id="columns">
-    <div id="side">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Question</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><span>访问时间：<%= @current_time %></span></li>
-      </ul>
-    </div>
-    <div id="main">
-      <%= yield %>
-    </div>
+  <div id="main">
+    <%= yield %>
   </div>
+</div>
 </body>
 </html>
