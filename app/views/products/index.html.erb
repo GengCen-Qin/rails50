@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Products</h1>
+
+<table>
+  <% @products.each do |this_product| %>
+    <tr class="<%= cycle("list_line_odd", "list_line_even") %>">
+      <td>
+        <%= image_tag(this_product.image_url, class: "list_image") %>
+      </td>
+
+      <td class="list_description">
+        <dl>
+          <dt><%= this_product.title %></dt>
+          <!-- truncate 只展示80个字符，strip_tags过滤掉描述中的HTML标签-->
+          <dd><%= truncate(strip_tags(this_product.description), length: 80) %></dd>
+        </dl>
+      </td>
+
+      <td class="list_actions">
+        <%= link_to "show", this_product %> <br>
+        <%= link_to "edit", edit_product_path(this_product) %> <br>
+        <%= link_to "del", this_product, method: :delete, data: {confirm: "are you sure ? "} %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<br>
+
+<%= link_to "New product", new_product_path %>
