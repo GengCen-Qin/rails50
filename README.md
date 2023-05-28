@@ -7,6 +7,7 @@
 - rails test:models 测试model层
 - rails db:seed 把seed.rb 下的测试数据导入数据库，这是为了方便团队其他人员使用时，不需要自己再创建数据，直接导入
 - rails db:rollback 回滚最近一次 rails db:migrate 的操作
+- rails dev:cache 开发环境开启缓存
 
 ## 验证与单元测试
 验证：数据校验
