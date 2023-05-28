@@ -21,11 +21,11 @@
       <li><a href="#">News</a></li>
       <li><a href="#">Contact</a></li>
       <li><span>访问时间：<%= @current_time %></span></li>
-      <% if @counter > 5 %>
+      <% if @counter != nil && @counter > 5 %>
         <li><span>终于到：<%= @counter %></span></li>
       <% else %>
         <li><span>才到：<%= @counter %></span></li>
-      <% end %>>
+      <% end %>
     </ul>
   </div>
   <div id="main">
