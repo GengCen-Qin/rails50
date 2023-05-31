@@ -7,3 +7,10 @@
     <li><%= item.quantity %> &times; <%= item.product.title %></li>
   <% end %>
 </ul>
+
+<%= button_to "清空购物车", @cart, method: :delete, form: {
+  data: {
+    turbo_confirm: '您确定清空购物车吗 ?'
+  }
+}
+%>

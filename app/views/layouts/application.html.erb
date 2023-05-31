@@ -16,10 +16,10 @@
 <div id="columns">
   <div id="side">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Question</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Question</a></li>
+      <li><a href="/">News</a></li>
+      <li><a href="/">Contact</a></li>
       <li><span>访问时间：<%= @current_time %></span></li>
       <% if @counter != nil && @counter > 5 %>
         <li><span>终于到：<%= @counter %></span></li>
@@ -33,4 +33,6 @@
   </div>
 </div>
 </body>
+
+<%= javascript_include_tag "turbo", type: "module" %>
 </html>

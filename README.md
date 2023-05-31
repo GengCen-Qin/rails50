@@ -17,4 +17,7 @@
 验证：数据校验
 model 中进行 validates 校验
 
+## Bug修复
+### 
+
 单元测试：需要注意，单元测试使用的数据，默认为 /test/fixtures/your_models.yml 中配置的数据
