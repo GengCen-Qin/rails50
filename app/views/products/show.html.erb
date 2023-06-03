@@ -3,8 +3,10 @@
 <%= render @product %>
 
 <div>
-  <%= link_to "Edit this product", edit_product_path(@product) %> |
-  <%= link_to "Back to products", products_path %>
-
-  <%= button_to "Destroy this product", @product, method: :delete %>
+  <%= link_to "编辑", edit_product_path(@product) %> <br>
+  <%= link_to "返回产品列表", products_path %> <br>
+  <form action="<%= @product %>" method="post" >
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit" onclick="return confirm('你确定要删除该商品吗？')">删除</button>
+  </form>
 </div>

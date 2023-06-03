@@ -17,10 +17,14 @@
         </dl>
       </td>
 
+      <td>
+        <%= number_to_currency(this_product.price) %>
+      </td>
+
       <td class="list_actions">
-        <%= link_to "show", this_product %> <br>
-        <%= link_to "edit", edit_product_path(this_product) %> <br>
-        <%= link_to "del", this_product, method: :delete, data: {confirm: "are you sure ? "} %>
+        <%= link_to "详情", this_product %> <br>
+        <%= link_to "编辑", edit_product_path(this_product) %> <br>
+        <%= link_to "删除", this_product, method: :delete %>
       </td>
     </tr>
   <% end %>
