@@ -1,7 +1,13 @@
-.item_price, .total_line {
-  text-align: right;
+#side #cart {
+  .item_price, .total_line {
+    text-align: right;
+  }
 }
 .total_line .total_cell {
     font-weight: bold;
     border-top: 1px solid #595;
+}
+.white-link {
+  color: white;
+  /* 这里可以定义其他样式 */
 }

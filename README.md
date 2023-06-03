@@ -13,6 +13,7 @@
   - rails g migration add_xxx_to_xxx
   - rails g migration remove_xxx_from_xxx
 - rails g migration combine_items_in_cart 生成合并的迁移文件，但这里rails无法推断出要干嘛，所以需要自己写，这里需要写 up ， down方法，up表示你要干的事儿，down表示撤销你up 的操作
+- rails g channel products 使用Action Cable,生成广播
 ## 验证与单元测试
 验证：数据校验
 model 中进行 validates 校验

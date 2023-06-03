@@ -8,7 +8,9 @@ gem "rails", "~> 7.0.5"
 
 gem "sass-rails"
 
-gem 'jquery-rails'
+gem "jquery-rails"
+
+gem "jquery-ui-rails"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"

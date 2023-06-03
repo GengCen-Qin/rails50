@@ -1,5 +1,6 @@
 class StoreController < ApplicationController
-  before_action :calculate_user_counter, only: [:index]
+  include CurrentCart
+  before_action :set_cart
   def index
     @products = Product.order(:title)
     @current_time = Time.now

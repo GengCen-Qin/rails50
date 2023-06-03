@@ -5,8 +5,8 @@
 <div>
   <%= link_to "编辑", edit_product_path(@product) %> <br>
   <%= link_to "返回产品列表", products_path %> <br>
-  <form action="<%= @product %>" method="post" >
-      <input type="hidden" name="_method" value="delete">
-      <button type="submit" onclick="return confirm('你确定要删除该商品吗？')">删除</button>
-  </form>
+  <%= link_to "删除", @product , data: {
+    turbo_method: :delete,
+    turbo_confirm: "确定删除#{@product.title}吗？"
+  }%>
 </div>

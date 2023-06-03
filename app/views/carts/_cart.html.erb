@@ -1,2 +1,17 @@
-<div id="<%= dom_id cart %>">
-</div>
+
+<h2>你的购物车</h2>
+
+<table>
+  <%= render(@cart.line_items) %>
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+</table>
+
+<br/>
+
+<%= link_to "清空购物车", @cart, class: "white-link", data: {
+    turbo_method: :delete,
+    turbo_confirm: "你确定清空购物车吗?"
+} %>
