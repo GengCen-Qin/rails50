@@ -24,7 +24,7 @@
       <td class="list_actions">
         <%= link_to "详情", this_product %> <br>
         <%= link_to "编辑", edit_product_path(this_product) %> <br>
-        <%= link_to "删除", this_product, method: :delete %>
+        <%= link_to "删除", this_product, method: :delete, data: { confirm: "你确定吗？" } %>
       </td>
     </tr>
   <% end %>
